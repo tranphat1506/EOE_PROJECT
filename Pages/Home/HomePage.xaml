@@ -1,0 +1,157 @@
+﻿<Page x:Class="E2E_APPLICATION.Pages.Home.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:E2E_APPLICATION.Pages.Home"
+      xmlns:layouts="clr-namespace:E2E_APPLICATION.Layouts"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HomePage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <layouts:DefaultLayout />
+        <!--Center Buttons-->
+        <Grid Grid.Column="1" Width="260" MaxHeight="500" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.3*" />
+            </Grid.RowDefinitions>
+            <!--Sign In Button-->
+            <Border Grid.Row="1" Grid.Column="0">
+                <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="21" BorderThickness="0" BorderBrush="Transparent">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="border" Background="#FF4B64" CornerRadius="18" Margin="0,0,0,5" BorderThickness="1" BorderBrush="#33333399">
+                                            <ContentPresenter Content="ĐĂNG NHẬP"
+                                                              HorizontalAlignment="Center" 
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#fc3c56"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#ed445b"/>
+                                            </Trigger>
+                                            <Trigger Property="IsFocused" Value="True">
+                                                <Setter TargetName="border" Property="BorderThickness" Value="1"/>
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#333"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+            <!--Sign Up Button-->
+            <Border Grid.Row="2" Grid.Column="0">
+                <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="21" BorderThickness="0" BorderBrush="Transparent">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="border" Background="#FF944E" CornerRadius="18" Margin="0,0,0,5" BorderThickness="1" BorderBrush="#33333399">
+                                            <ContentPresenter Content="ĐĂNG KÝ"
+                                                  HorizontalAlignment="Center" 
+                                                  VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#fc8135"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#ea8648"/>
+                                            </Trigger>
+                                            <Trigger Property="IsFocused" Value="True">
+                                                <Setter TargetName="border" Property="BorderThickness" Value="1"/>
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#333"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+            <!--Setting Button-->
+            <Border Grid.Row="3" Grid.Column="0">
+                <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="21" BorderThickness="0" BorderBrush="Transparent">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="border" Background="#8DCC71" CornerRadius="18" Margin="0,0,0,5" BorderThickness="1" BorderBrush="#33333399">
+                                            <ContentPresenter Content="CÀI ĐẶT"
+                                      HorizontalAlignment="Center" 
+                                      VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#82ba68"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#98cc80"/>
+                                            </Trigger>
+                                            <Trigger Property="IsFocused" Value="True">
+                                                <Setter TargetName="border" Property="BorderThickness" Value="1"/>
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#333"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+            <!--Exit Button-->
+            <Border Grid.Row="4" Grid.Column="0">
+                <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="21" BorderThickness="0" BorderBrush="Transparent">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="border" Background="#019BE3" CornerRadius="18" Margin="0,0,0,5" BorderThickness="1" BorderBrush="#33333399">
+                                            <ContentPresenter Content="THOÁT"
+                                      HorizontalAlignment="Center" 
+                                      VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#028fd1"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#12a0e2"/>
+                                            </Trigger>
+                                            <Trigger Property="IsFocused" Value="True">
+                                                <Setter TargetName="border" Property="BorderThickness" Value="1"/>
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#333"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>
