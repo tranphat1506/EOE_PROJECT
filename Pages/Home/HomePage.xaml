@@ -26,14 +26,14 @@
             </Grid.RowDefinitions>
             <!--Sign In Button-->
             <Border Grid.Row="1" Grid.Column="0">
-                <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="21" BorderThickness="0" BorderBrush="Transparent">
+                <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="21" BorderThickness="0" BorderBrush="Transparent" Click="Play_Click">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border x:Name="border" Background="#FF4B64" CornerRadius="18" Margin="0,0,0,5" BorderThickness="1" BorderBrush="#33333399">
-                                            <ContentPresenter Content="ĐĂNG NHẬP"
+                                            <ContentPresenter Content="CHƠI NGAY"
                                                               HorizontalAlignment="Center" 
                                                               VerticalAlignment="Center"/>
                                         </Border>
@@ -65,7 +65,7 @@
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
                                         <Border x:Name="border" Background="#FF944E" CornerRadius="18" Margin="0,0,0,5" BorderThickness="1" BorderBrush="#33333399">
-                                            <ContentPresenter Content="ĐĂNG KÝ"
+                                            <ContentPresenter Content="BẢNG XẾP HẠNG"
                                                   HorizontalAlignment="Center" 
                                                   VerticalAlignment="Center"/>
                                         </Border>

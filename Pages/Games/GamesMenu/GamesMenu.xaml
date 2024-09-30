@@ -1,0 +1,144 @@
+﻿<Page x:Class="E2E_APPLICATION.Pages.Games.GamesMenu.GamesMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:E2E_APPLICATION.Pages.Games.GamesMenu"
+      xmlns:layouts="clr-namespace:E2E_APPLICATION.Layouts"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GamesMenu">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--Layout-->
+        <layouts:DefaultLayout Grid.ColumnSpan="6" Grid.RowSpan="6" />
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border Grid.RowSpan="2" Background="LightCyan" Opacity="0.3" BorderBrush="#000" BorderThickness="2" CornerRadius="10" />
+            <!--Game Titles-->
+            <Grid Grid.Row="0">
+                <Grid HorizontalAlignment="Center">
+                    <Viewbox>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+
+                            <TextBlock Foreground="#FF4B64" Text="G" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" Color="#999" BlurRadius="0" Opacity="1"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <TextBlock Foreground="#FF944E" Text="A" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" Color="#999" BlurRadius="0" Opacity="1"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <TextBlock Foreground="#8DCC71" Text="M" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" Color="#999" BlurRadius="0" Opacity="1"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <TextBlock Foreground="#019BE3" Text="E" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" Color="#999" BlurRadius="0" Opacity="1"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <TextBlock Foreground="Yellow" Text="S" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" Color="#999" BlurRadius="0" Opacity="1"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                        </StackPanel>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+            <!--Main Image Game-->
+            <Grid Grid.Row="1" Margin="0, 0, 0, 30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Margin="0,0,0,10">
+                        <Border CornerRadius="10" BorderThickness="1" BorderBrush="#000">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Assets/Images/DefaultBackground.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Border CornerRadius="10" BorderThickness="1" BorderBrush="#000">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Assets/Images/DefaultBackground.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0">
+                <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="16" BorderThickness="0" BorderBrush="Transparent">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Viewbox>
+                                            <Border x:Name="border" Background="#FF4B64" CornerRadius="15" BorderThickness="1" BorderBrush="#33333399">
+                                                <ContentPresenter Content="QUAY LẠI"
+                                                                      HorizontalAlignment="Center" 
+                                                                      VerticalAlignment="Center" Margin="15, 5"/>
+                                            </Border>
+                                        </Viewbox>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#fc3c56"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#ed445b"/>
+                                            </Trigger>
+                                            <Trigger Property="IsFocused" Value="True">
+                                                <Setter TargetName="border" Property="BorderThickness" Value="1"/>
+                                                <Setter TargetName="border" Property="BorderBrush" Value="#333"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

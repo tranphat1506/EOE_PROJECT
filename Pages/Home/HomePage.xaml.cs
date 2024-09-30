@@ -25,14 +25,9 @@ namespace E2E_APPLICATION.Pages.Home
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Play_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
+            this.NavigationService.Navigate(new Uri("/Pages/Games/GamesMenu/GamesMenu.xaml", UriKind.Relative));
         }
     }
 }

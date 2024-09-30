@@ -10,15 +10,18 @@
 
   <ItemGroup>
     <None Remove="Assets\Images\Background2.jpg" />
+    <None Remove="Pages\Games\GamesMenu\wooden.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\Images\Background2.jpg" />
+    <Resource Include="Pages\Games\GamesMenu\wooden.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="Models\EmotionModel\" />
+    <Folder Include="Pages\Games\EmotionRunning\" />
   </ItemGroup>
 
 </Project>
