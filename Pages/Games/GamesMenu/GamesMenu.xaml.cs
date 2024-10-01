@@ -24,5 +24,10 @@ namespace E2E_APPLICATION.Pages.Games.GamesMenu
         {
             InitializeComponent();
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
     }
 }

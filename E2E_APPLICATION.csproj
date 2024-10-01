@@ -9,13 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\Background1.jpg" />
     <None Remove="Assets\Images\Background2.jpg" />
-    <None Remove="Pages\Games\GamesMenu\wooden.jpg" />
+    <None Remove="Assets\Images\DefaultBackground.jpg" />
+    <None Remove="Assets\Images\wooden.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Images\Background1.jpg" />
     <Resource Include="Assets\Images\Background2.jpg" />
-    <Resource Include="Pages\Games\GamesMenu\wooden.jpg" />
+    <Resource Include="Assets\Images\DefaultBackground.jpg" />
+    <Resource Include="Assets\Images\wooden.jpg" />
   </ItemGroup>
 
   <ItemGroup>
