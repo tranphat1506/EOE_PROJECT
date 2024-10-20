@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\Arrow.png" />
     <None Remove="Assets\Images\Background1.jpg" />
     <None Remove="Assets\Images\Background2.jpg" />
     <None Remove="Assets\Images\DefaultBackground.jpg" />
@@ -16,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Images\Arrow.png" />
     <Resource Include="Assets\Images\Background1.jpg" />
     <Resource Include="Assets\Images\Background2.jpg" />
     <Resource Include="Assets\Images\DefaultBackground.jpg" />
@@ -26,6 +28,10 @@
     <Folder Include="Components\" />
     <Folder Include="Models\EmotionModel\" />
     <Folder Include="Pages\Games\EmotionRunning\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

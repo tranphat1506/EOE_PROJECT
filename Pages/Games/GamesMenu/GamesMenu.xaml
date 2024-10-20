@@ -36,7 +36,11 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Border Grid.RowSpan="2" Background="#fff" Opacity="0.3" CornerRadius="10" />
+            <Border Grid.RowSpan="2" CornerRadius="10" BorderThickness="1" BorderBrush="#000">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/Images/DefaultBackground.jpg" Stretch="UniformToFill" />
+                </Border.Background>
+            </Border>
             <!--Game Titles-->
             <Grid Grid.Row="0">
                 <Grid HorizontalAlignment="Center">
@@ -44,27 +48,27 @@
                         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                             <TextBlock Foreground="#FF4B64" Text="G" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
                                 <TextBlock.Effect>
-                                    <DropShadowEffect ShadowDepth="1" Color="#fff" BlurRadius="0" Opacity="1"/>
+                                    <DropShadowEffect ShadowDepth="1" Color="#000" BlurRadius="0" Opacity="1"/>
                                 </TextBlock.Effect>
                             </TextBlock>
                             <TextBlock Foreground="#FF944E" Text="A" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
                                 <TextBlock.Effect>
-                                    <DropShadowEffect ShadowDepth="1" Color="#fff" BlurRadius="0" Opacity="1"/>
+                                    <DropShadowEffect ShadowDepth="1" Color="#000" BlurRadius="0" Opacity="1"/>
                                 </TextBlock.Effect>
                             </TextBlock>
                             <TextBlock Foreground="#8DCC71" Text="M" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
                                 <TextBlock.Effect>
-                                    <DropShadowEffect ShadowDepth="1" Color="#fff" BlurRadius="0" Opacity="1"/>
+                                    <DropShadowEffect ShadowDepth="1" Color="#000" BlurRadius="0" Opacity="1"/>
                                 </TextBlock.Effect>
                             </TextBlock>
                             <TextBlock Foreground="#019BE3" Text="E" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
                                 <TextBlock.Effect>
-                                    <DropShadowEffect ShadowDepth="1" Color="#fff" BlurRadius="0" Opacity="1"/>
+                                    <DropShadowEffect ShadowDepth="1" Color="#000" BlurRadius="0" Opacity="1"/>
                                 </TextBlock.Effect>
                             </TextBlock>
                             <TextBlock Foreground="Yellow" Text="S" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="30">
                                 <TextBlock.Effect>
-                                    <DropShadowEffect ShadowDepth="1" Color="#fff" BlurRadius="0" Opacity="1"/>
+                                    <DropShadowEffect ShadowDepth="1" Color="#000" BlurRadius="0" Opacity="1"/>
                                 </TextBlock.Effect>
                             </TextBlock>
                         </StackPanel>
@@ -84,13 +88,17 @@
                             <ColumnDefinition Width="8*"/>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Border Grid.Column="1" CornerRadius="10" BorderThickness="1" BorderBrush="#000">
-                            <Border.Background>
-                                <ImageBrush ImageSource="/Assets/Images/DefaultBackground.jpg" Stretch="UniformToFill"/>
-                            </Border.Background>
+                        <Border Grid.Column="1" CornerRadius="10" BorderThickness="1" BorderBrush="#000" Background="#fff">
+                            
                         </Border>
-                        <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
-                            <Border Grid.Column="0">
+                        <!--Previous Game Button-->
+                        <Grid Grid.Column="0" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="1">
                                 <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="16" BorderThickness="0" BorderBrush="Transparent" Click="BackButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
@@ -98,11 +106,19 @@
                                                 <Setter.Value>
                                                     <ControlTemplate TargetType="Button">
                                                         <Viewbox>
-                                                            <Border x:Name="border" Background="#FF4B64" CornerRadius="15" BorderThickness="1" BorderBrush="#33333399">
-                                                                <ContentPresenter Content="CHƠI"
-                                      HorizontalAlignment="Center" 
-                                      VerticalAlignment="Center" Margin="15, 5"/>
-                                                            </Border>
+                                                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                                                <Grid.RenderTransform>
+                                                                    <TransformGroup>
+                                                                        <ScaleTransform/>
+                                                                        <SkewTransform/>
+                                                                        <RotateTransform Angle="180"/>
+                                                                        <TranslateTransform/>
+                                                                    </TransformGroup>
+                                                                </Grid.RenderTransform>
+                                                                <Border x:Name="border" Background="#FF4B64" CornerRadius="15" BorderThickness="1" BorderBrush="#33333399" Padding="10">
+                                                                    <Image Source="/Assets/Images/Arrow.png" />
+                                                                </Border>
+                                                            </Grid>
                                                         </Viewbox>
                                                         <ControlTemplate.Triggers>
                                                             <Trigger Property="IsMouseOver" Value="True">
@@ -124,8 +140,14 @@
                                 </Button>
                             </Border>
                         </Grid>
-                        <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
-                            <Border Grid.Column="0">
+                        <!--Next Game Button-->
+                        <Grid Grid.Column="2" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="1">
                                 <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="16" BorderThickness="0" BorderBrush="Transparent" Click="BackButton_Click">
                                     <Button.Style>
                                         <Style TargetType="Button">
@@ -133,11 +155,11 @@
                                                 <Setter.Value>
                                                     <ControlTemplate TargetType="Button">
                                                         <Viewbox>
-                                                            <Border x:Name="border" Background="#FF4B64" CornerRadius="15" BorderThickness="1" BorderBrush="#33333399">
-                                                                <ContentPresenter Content="CHƠI"
-                                      HorizontalAlignment="Center" 
-                                      VerticalAlignment="Center" Margin="15, 5"/>
-                                                            </Border>
+                                                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                                <Border x:Name="border" Background="#FF4B64" CornerRadius="15" BorderThickness="1" BorderBrush="#33333399" Padding="10">
+                                                                    <Image Source="/Assets/Images/Arrow.png" />
+                                                                </Border>
+                                                            </Grid>
                                                         </Viewbox>
                                                         <ControlTemplate.Triggers>
                                                             <Trigger Property="IsMouseOver" Value="True">
@@ -161,6 +183,7 @@
                         </Grid>
 
                     </Grid>
+                    <!--Play Button-->
                     <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Border Grid.Column="0">
                             <Button FocusVisualStyle="{x:Null}" Foreground="White" FontWeight="Black" FontFamily="pack://application:,,,/Assets/Fonts/Work_Sans/#Work Sans" FontSize="16" BorderThickness="0" BorderBrush="Transparent" Click="BackButton_Click">
@@ -199,6 +222,7 @@
                 </Grid>
             </Grid>
         </Grid>
+        <!--Back Button-->
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

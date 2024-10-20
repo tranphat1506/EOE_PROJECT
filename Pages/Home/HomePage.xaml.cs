@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E2E_APPLICATION.Models.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,27 @@ namespace E2E_APPLICATION.Pages.Home
     /// </summary>
     public partial class HomePage : Page
     {
+        private HomeViewModel _homeViewModel;
         public HomePage()
         {
             InitializeComponent();
+            _homeViewModel = new HomeViewModel();
+            this.DataContext = _homeViewModel;
         }
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("/Pages/Games/GamesMenu/GamesMenu.xaml", UriKind.Relative));
+        }
+
+        private async void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            await _homeViewModel.Login("user@example.com", "string");
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            _homeViewModel.Logout();
         }
     }
 }
